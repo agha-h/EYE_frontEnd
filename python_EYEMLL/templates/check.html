@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='check.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='dashboardEYE.css') }}"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: black;
+        color: white;
+        margin: 0;
+      }
+      .stats-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .amount-per-transaction {
+        background-color: #333;
+        border-radius: 5px;
+        padding: 20px;
+        width: 20%;
+        margin-right: 20px;
+      }
+      .transactions-card {
+        background-color: #333;
+        border-radius: 5px;
+        padding: 20px;
+        flex-grow: 1;
+      }
+      .transaction-category {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .bar {
+        height: 20px;
+        background-color: white;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      .category-title {
+        width: 100px;
+      }
+      .category-amount {
+        white-space: nowrap;
+        padding-left: 20px;
+        text-align: right;
+      }
+      .chart-container {
+        width: 100%;
+        margin-bottom: 20px;
+      }
+      #lineChart {
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 sidebar">
+          <!-- Logo and Heading -->
+          <div class="logo-container">
+            <img
+              src="{{ url_for('static', filename='logo.png') }}"
+              alt="EyeML Logo"
+              class="logo"
+            />
+            <h2><b>Customer Check</b> <br /><b>Dashboard</b></h2>
+          </div>
+          <div class="foot" style="padding-top: 25vh" 0>
+            <div class="footer">
+              <p>Contact Us</p>
+              <i class="fa fa-envelope fa-2xl" style="color: black"></i>
+              <p>EyeML 2024</p>
+              <p>All Rights Reserved</p>
+            </div>
+          </div>
+          <a href="{{ url_for('dashboard') }}" class="back-button">
+            <img
+              src="{{ url_for('static', filename='back-logo.png') }}"
+              alt="Back"
+              class="back-button"
+            />
+          </a>
+        </div>
+
+        <!-- Main Content -->
+        <div class="col-md-9">
+          <div class="dashboard">
+            <!-- Line Chart for Account Activity -->
+            <div class="chart-container">
+              <canvas id="lineChart"></canvas>
+            </div>
+
+            <div class="stats-container">
+              <!-- Amount per transaction -->
+              <div class="amount-per-transaction">
+                <h3>Amount per transaction</h3>
+                <h1 style="color: white; margin-left: 5vh; padding-top: 20px">
+                  $3,797
+                </h1>
+              </div>
+
+              <!-- Number of Transactions for each Payment format -->
+              <div class="transactions-card">
+                <h2>Number of Transactions for each Payment format</h2>
+                <div class="transaction-category">
+                  <span class="category-title">ACH</span>
+                  <div class="bar" style="width: 70%"></div>
+                  <span class="category-amount" style="color: white"
+                    >28.5K</span
+                  >
+                </div>
+                <div class="transaction-category">
+                  <span class="category-title">Bitcoin</span>
+                  <div class="bar" style="width: 60%"></div>
+                  <span class="category-amount" style="color: white">25K</span>
+                </div>
+                <div class="transaction-category">
+                  <span class="category-title">Cash</span>
+                  <div class="bar" style="width: 30%"></div>
+                  <span class="category-amount" style="color: white">7.7K</span>
+                </div>
+                <div class="transaction-category">
+                  <span class="category-title">Cheque</span>
+                  <div class="bar" style="width: 40%"></div>
+                  <span class="category-amount" style="color: white">12K</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Chart.js Script -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const ctx = document.getElementById("lineChart").getContext("2d");
+      const lineChart = new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: [
+            "5 Nov",
+            "12 Nov",
+            "19 Nov",
+            "25 Nov",
+            "2 Dec",
+            "9 Dec",
+            "16 Dec",
+          ], // Your dates
+          datasets: [
+            {
+              label: "Account Activity",
+              data: [5000, 10000, 7500, 11000, 9000, 12000, 8000], // Your data points
+              backgroundColor: "rgba(75, 192, 192, 0.2)", // Light green background
+              borderColor: "rgb(60, 179, 113)", // Solid green border
+              borderWidth: 2,
+            },
+          ],
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true,
+              title: {
+                display: true,
+                text: "Amount ($)",
+              },
+            },
+            x: {
+              title: {
+                display: true,
+                text: "Date",
+              },
+            },
+          },
+          responsive: true,
+          maintainAspectRatio: false,
+        },
+      });
+    </script>
+  </body>
+</html>

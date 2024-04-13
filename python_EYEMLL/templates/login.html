@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to EyeML</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='styles.css') }}"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="sidebar">
+        <img
+          src="{{ url_for('static', filename='logo.png') }}"
+          alt="EyeML Logo"
+          class="sidebar-logo"
+        />
+        <h1 style="font-size: 48px">EyeML</h1>
+        <h3>Sign in to your account</h3>
+        <div class="footer">
+          <p class="bottom">Contact Us</p>
+          <div class="env_color">
+            <i class="fa fa-envelope"></i>
+          </div>
+          <p>EyeML 2024<br />All Rights Reserved</p>
+        </div>
+      </div>
+      <div class="login-content">
+        <div class="top-content">
+          <div class="parent">
+            <div class="top">
+              <h3>Welcome to <span style="color: green">EyeML</span></h3>
+            </div>
+            <div class="login-header">
+              <h1 style="font-size: 48px">Log in</h1>
+              <img
+                src="{{ url_for('static', filename='logo.png') }}"
+                alt="EyeML Logo"
+                class="top-logo"
+              />
+            </div>
+          </div>
+        </div>
+        <form action="{{ url_for('login_post') }}" method="POST">
+          <div class="input-group">
+            <label for="username">Enter your Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Username"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <label for="password">Enter your Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Password"
+              required
+            />
+          </div>
+          <div class="actions">
+            <button type="submit">Sign in</button>
+            <a href="{{ url_for('forgot_password') }}"
+              >Forgot Password?<br
+            /></a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,229 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    background-color: black;
+    color: #f8f8f8;
+}
+
+.sidebar {
+    padding: 20px;
+    min-height: 100vh; 
+    background: url('../static/skin.png') no-repeat center center fixed;
+    background-size: cover;
+    color: #000000;
+    font-weight: bold;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    padding-top: 20vh;
+    padding-bottom: 10vh;
+    background: url('../static/skin.png') no-repeat center center fixed;/* Full height */
+}
+
+.logo {
+    /* Adjust the width and height as necessary to fit your design */
+    width: auto;
+    height: 100px; /* Example height */
+    margin-right: -20px; /* Add some space between logo and text */
+}
+
+.logo-container h2 {
+    margin: 0; /* Remove default margins from h2 to align properly with logo */
+    white-space: nowrap; /* Prevents the text from wrapping */
+}
+.circle-container {
+    display: flex;
+    flex-direction: column;
+   
+    padding-right: 10vh;
+   
+}
+
+.circle {
+    border-radius: 50%;
+    width: 20vh;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 10px -10vh;
+}
+
+.normal {
+    border: 8px solid green;
+}
+
+.suspicious {
+    border: 8px solid red;
+}
+
+.label {
+    color: white;
+    font-weight: bold;
+}
+
+.percentage {
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+.dashboard-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Align the top of the circles and the transaction card */
+    padding: 20px;
+}
+.transaction-card {
+    background: #000000; /* Assuming a white background */
+    padding: 40px;
+    border: 2px solid rgb(52, 51, 51);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    border-radius: 4px;
+    color: #fff;
+}
+.transaction-card h5{
+    padding-bottom: 5vh;
+}
+.transaction-item {
+    margin: 10px 0;
+}
+
+.transaction-item span {
+    display: block; /* Makes the span take up the whole width */
+}
+
+.transaction-bar {
+    height: 5px;
+    background-color: rgb(255, 255, 255); /* Change color as needed */
+    margin-top: 5px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+/* Custom styles for your cards and other components */
+.card-header {
+    background-color: #333;
+    color: white;
+}
+.card-container {
+    padding-top: 10vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0; /* Space above and below the card container */
+}
+
+.vertical-stack {
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Adjust width as needed */
+}
+
+.card {
+    background-color: #323131; /* Dark background */
+    color: rgb(255, 255, 255); /* White text */
+    padding: 20px;
+    margin-bottom: 20px; /* Space between cards */
+    margin-left: 10vh;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    text-align: center;
+    width: 80%; /* Adjust width as needed, ensure it is the same for all cards */
+    /* Optional: set a max-width for larger screens */
+    max-width: 300px;
+}
+.cards {
+    background-color: #323131; /* Dark background */
+    color: white; /* White text */
+    padding: 20px;
+    margin-bottom: 20px; /* Space between cards */
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for depth */
+    text-align: center;
+    width: 80%; /* Adjust width as needed, ensure it is the same for all cards */
+    /* Optional: set a max-width for larger screens */
+    max-width: 300px;
+}
+.card:last-child {
+    margin-bottom: 0; /* Remove bottom margin from the last card */
+}
+
+.card-value, .card-subvalue {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+
+.card-value {
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card-subtitle {
+    font-size: 1.2em;
+    margin-bottom: 5px;
+}
+
+.card-subvalue {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.dropdown-container {
+    background-color: #f8f8f8; /* Light background */
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;
+}
+
+.dropdown-container h2 {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background-color: white;
+    -webkit-appearance: none; /* Removes default styling on iOS */
+    -moz-appearance: none;    /* Removes default styling on Firefox */
+    appearance: none;         /* Removes default styling */
+}
+
+/* Style to add a custom dropdown arrow */
+select {
+    background-image: url('data:image/svg+xml;charset=US-ASCII,<svg width="12px" height="12px" viewBox="0 0 4 5" xmlns="http://www.w3.org/2000/svg"><path fill="%23000" d="M2 0L0 2h4L2 0zm0 5L0 3h4l-2 2z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px top 50%;
+    background-size: 12px;
+}
+
+.cardBorder{
+    background-color: #000000;
+    border: 2px solid #626060;
+}
+
+.padTop{
+    padding-top: 10vh;
+    padding-left: 10vh;
+}
+
+.padTop2{
+    padding-top: 10vh;
+}

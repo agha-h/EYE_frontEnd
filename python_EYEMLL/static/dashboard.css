@@ -1,0 +1,131 @@
+/* Add your previous CSS and append below styles for the dashboard */
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.sidebar {
+    width: 200px;
+    height: 100vh;
+    background-color: #141111;
+    float: left;
+    padding: 20px;
+    display: flex;
+}
+.sidebars {
+    width: 55px;
+    height: 105vh;
+    background-color: #f9f1f1;
+    float: left;
+   
+  background-image: var(--background-image-url);
+
+
+
+}
+.sidebar h1 {
+    color: white;
+    margin: 0;
+    font-size: 24px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+ 
+    padding: 10px;
+    padding-top: 30px;
+    color: white;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+.sidebar-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .header-content, .sidebar-item {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px solid green; /* Green line under each item */
+  }
+  
+  .icon-background {
+ color: green;
+    display: flex;
+    padding-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    width: 50px; /* Adjust based on your icon size */
+    height: 50px; /* Adjust based on your icon size */
+    margin-right: 30px; /* Space between the icon/image column and text */
+  }
+  .icon-backgrounds {
+    color: green;
+       display: flex;
+       padding-top: 60vh;
+       align-items: center;
+       justify-content: center;
+       width: 50px; /* Adjust based on your icon size */
+       height: 50px; /* Adjust based on your icon size */
+       /* Space between the icon/image column and text */
+     }
+  .eyeml-icon {
+    width: 10vh; /* Ensure the image fits within the icon background */
+    height: auto;
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  li {
+    padding-top: 20px;
+    margin-bottom: 5px; /* Space between items */
+  }
+  
+  a {
+    text-decoration: none;
+    color: #ffffff; /* Adjust as needed */
+    display: block;
+    width: 100%; /* Ensures the underline spans the full width */
+  }
+  
+.main-content {
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+    text-align: center;
+    padding: 20px;
+    padding-top: 35vh;
+    
+}
+.button{
+    border-radius: 35px;
+    border: 2px solid black;
+    padding: 20px;
+    width: 40vh;
+    color: aliceblue;
+    background-color: rgb(13, 169, 13);
+font-size: 24px;
+font-family: 'Times New Roman', Times, serif;
+  }
+
+.footer{    color: rgb(53, 53, 53);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+    text-align: center;
+    margin-left:18vh ;
+}
+
+.footer p:nth-of-type(2),
+.footer p:nth-of-type(3) {
+    padding-bottom: 15px;
+}
+
+/* Continue with rest of your styles for buttons, etc. */

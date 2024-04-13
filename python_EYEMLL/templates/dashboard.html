@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EyeML Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='dashboard.css') }}"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <style>
+      :root {
+        --background-image-url: url("{{ url_for('static', filename='skins.png') }}");
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sidebars">
+      <div class="icon-background">
+        <img
+          src="{{ url_for('static', filename='logo.png') }}"
+          alt="EyeML Icon"
+          class="eyeml-icon"
+        />
+      </div>
+
+      <div class="icon-background"><i class="fa fa-info-circle"></i></div>
+      <div class="icon-background">
+        <i class="fa fa-tachometer-alt"></i>
+      </div>
+      <div class="icon-background"><i class="fa fa-user-check"></i></div>
+
+      <div class="icon-backgrounds">
+        <i class="fas fa-arrow-left"></i>
+      </div>
+    </div>
+    <div class="sidebar">
+      <div class="sidebar-content">
+        <div class="header-content">
+          <h1>EyeML</h1>
+        </div>
+
+        <ul>
+          <li class="sidebar-item">
+            <a href="{{ url_for('about') }}">About EyeML</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="{{ url_for('dashboardEYE') }}">Dashboard</a>
+          </li>
+          <li class="sidebar-item">
+            <a href="{{ url_for('customer_check') }}">Customer Check</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main-content">
+      <h1 style="font-size: 58px">Import Your Dataset Here</h1>
+      <!-- Form to upload dataset -->
+
+      <button type="submit" class="button">Upload Dataset</button>
+    </div>
+
+    <div class="footer">
+      <p>Contact Us</p>
+
+      <i class="fa fa-envelope fa-2xl" style="color: black"></i>
+      <p>EyeML 2024</p>
+      <p>All Rights Reserved</p>
+    </div>
+  </body>
+</html>

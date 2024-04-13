@@ -1,0 +1,130 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    background: url('../static/background.png') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+.containers {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.header {
+    text-align: left;
+    padding: 20px;
+}
+
+.logo-icon {
+    width: 25vh; 
+    height: 15vh; /* Adjust to match the size of your logo */
+}
+
+.main-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.about-section {
+    background-color: rgba(255, 255, 255, 0); /* Adjust for the correct level of transparency */
+    color: #333; /* Dark text color for readability */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    margin: 20px 0; /* Spacing from other elements */
+    text-align: center; /* Center text alignment */
+    max-width: 600px; /* Max width of the section */
+    margin-left: auto; /* Center the section horizontally */
+    margin-right: auto;
+  }
+  
+  .about-section h2 {
+    color: #004d40; /* Adjust the color to match the image */
+    margin-bottom: 20px; /* Spacing after the title */
+  }
+  
+  .about-section p {
+    font-size: 1.1em; /* Slightly larger font size for the paragraph */
+    line-height: 1.6; /* Spacing between lines */
+  }
+  
+  .visit-website-button {
+    display: inline-block; /* Make the link behave like a button */
+    padding: 10px 20px; /* Button padding */
+    background-color: #4CAF50; /* Button background color */
+    color: white; /* Button text color */
+    text-decoration: none; /* No underline */
+    border-radius: 4px; /* Rounded corners for the button */
+    margin-top: 20px; /* Spacing above the button */
+  }
+  
+  .visit-website-button:hover {
+    background-color: #367c39; /* Darker green on hover */
+    transition: background-color 0.3s; /* Smooth transition */
+  }
+
+.visit-website-button {
+    background-color: #4CAF50;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+.features-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features-section li {
+    margin-bottom: 10px;
+}
+
+.features-section .icon {
+    margin-right: 5px;
+    /* style your icons here */
+}
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0);
+    padding: 10px;
+    position: relative;
+}
+
+.back-button {
+    position: absolute;
+    left: 20px;
+}
+
+.back-button img {
+    width: 50px;  /* Adjust to match the size of your back icon */
+}
+
+/* Adjust the rest of your styles as needed to match the provided image */
+.about-title {
+    position: relative;
+    display: inline-block; /* Required for the pseudo-element to position correctly */
+    padding-left: -20px; /* Give some space for the line */
+  }
+  
+  .about-title::before {
+    content: ''; /* The content property is required for pseudo-elements */
+    position: absolute;
+    left: -10px; /* Align to the left of the .about-title element */
+    top: 50%; /* Center vertically */
+    transform: translateY(-50%); /* Adjust the positioning precisely */
+    width: 5px; /* Thickness of the line */
+    height: 15vh; /* Height of the line */
+    background-color: green; /* Use the same green as the one in your image */
+  }
+  

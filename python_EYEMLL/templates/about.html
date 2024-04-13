@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About EyeML</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='about.css') }}"
+    />
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="containers">
+      <div class="header">
+        <img
+          src="{{ url_for('static', filename='logo.png') }}"
+          alt="EyeML Logo"
+          class="logo-icon"
+        />
+        <h1
+          style="
+            padding-left: 6vh;
+            font-family: 'Times New Roman', Times, serif;
+          "
+        >
+          <b>EYEML</b>
+        </h1>
+      </div>
+
+      <div class="main-content">
+        <div class="about-section">
+          <h1 class="about-title">
+            <b>About Our</b> <br />
+            <b>EyeML Tool</b>
+          </h1>
+          <p>
+            Get insights into complex financial transactions, discover <br />
+            patterns, and master the art of detecting money <br />
+            laundering. Put on your detective hat — it's time to dive<br />
+            in!<br />
+            <br />
+            For more Info about Money laundering visit the following website
+          </p>
+          <a href="https://link-to-more-info.com" class="visit-website-button"
+            >Visit Website</a
+          >
+        </div>
+        <div class="features-section">
+          <h2 style="padding-bottom: 6vh"><b>EyeML Features</b></h2>
+          <ul>
+            <li>
+              <i class="fas fa-search icon"></i> Discover, navigate, and conquer
+              the mysteries of financial transactions
+            </li>
+            <li>
+              <i class="fa fa-desktop"></i>
+              EyeML utilizes advanced technologies to analyse vast amounts of
+              data and detect suspicious transactions.
+            </li>
+            <li>
+              <i class="fa fa-percent fa-xl"></i> Powerful tool with detection
+              of high accuracy
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <a href="{{ url_for('dashboard') }}" class="back-button">
+          <img
+            src="{{ url_for('static', filename='back-logo.png') }}"
+            alt="Back"
+          />
+        </a>
+        <div class="row">
+          <div class="col text-center">
+            <p>Contact Us</p>
+            <a href="mailto:your@email.com">
+              <i class="fa fa-envelope fa-2xl" style="color: black"></i>
+            </a>
+            <p>EyeML 2024<br />All Rights Reserved</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

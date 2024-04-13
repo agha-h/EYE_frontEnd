@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard - EyeML</title>
+    <!-- Include Bootstrap CSS -->
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <!-- Custom styles -->
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='dashboardEYE.css') }}"
+    />
+
+    <style>
+      .transactions-card {
+        background-color: #333;
+        border-radius: 5px;
+        padding: 20px;
+      }
+      .transaction-category {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+      }
+      .bar {
+        height: 20px;
+        background-color: white;
+        border-radius: 5px;
+        margin-right: 10px;
+      }
+      .category-title {
+        width: 100px;
+      }
+      .category-amount {
+        white-space: nowrap;
+        padding-left: 20px;
+        text-align: right;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <!-- Sidebar -->
+        <div class="col-md-3 sidebar">
+          <!-- Logo and Heading -->
+          <div class="logo-container">
+            <img
+              src="{{ url_for('static', filename='logo.png') }}"
+              alt="EyeML Logo"
+              class="logo"
+            />
+            <h2>EyeML <br />Dashboard</h2>
+          </div>
+          <!-- Transaction Type Selection -->
+          <label for="transaction-type">Select transaction type</label>
+          <select id="transaction-type" name="transaction_type">
+            <option value="normal">Normal</option>
+            <option value="suspicious">Suspicious</option>
+          </select>
+          <!-- Currency Selection -->
+          <label for="currency">Select a Currency</label>
+          <select id="currency" name="currency">
+            <option value="USD">US Dollars</option>
+            <!-- Add other currency options here -->
+          </select>
+        </div>
+        <!-- Dashboard Main Content -->
+        <div class="col-md-9">
+          <!-- New Top Cards Row -->
+          <div class="row mb-3">
+            <!-- New Single Left Top Card -->
+            <div class="col-md-4 padTop">
+              <div class="cards cardBorder">
+                <div class="card-body">
+                  <h5 class="card-title">Number of Accounts</h5>
+                  <h2 class="card-text">435, 564.</h2>
+                </div>
+              </div>
+            </div>
+            <!-- New Right Top Cards Column -->
+            <div class="col-md-8 padTop2">
+              <div class="row">
+                <!-- First Right Top Card -->
+                <h3>Number of suspicious/Normal</h3>
+                <div class="col-md-12 mb-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Normal</h5>
+                      <h2 class="card-text">500 K</h2>
+                    </div>
+                  </div>
+                </div>
+                <!-- Second Right Top Card (Stacked) -->
+                <div class="col-md-12">
+                  <div class="card">
+                    <div class="card-body">
+                      <h5 class="card-title">Suspicious</h5>
+                      <h2 class="card-text">800K</h2>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Circle Indicators & Transaction Card -->
+          <div class="dashboard-container">
+            <div class="circle-container">
+              <span class="label">Normal</span>
+              <div class="circle normal">
+                <span class="percentage">60%</span>
+              </div>
+              <span class="label">Suspicious</span>
+              <div class="circle suspicious">
+                <span class="percentage">40%</span>
+              </div>
+            </div>
+            <div class="transactions-card">
+              <h2>Number of Transactions for each Payment format</h2>
+              <div class="transaction-category">
+                <span class="category-title">Cash</span>
+                <div class="bar" style="width: 70%"></div>
+                <span class="category-amount" style="color: white">28.5K</span>
+              </div>
+              <div class="transaction-category">
+                <span class="category-title">Credit Card</span>
+                <div class="bar" style="width: 60%"></div>
+                <span class="category-amount" style="color: white">25K</span>
+              </div>
+              <div class="transaction-category">
+                <span class="category-title">Debit Card</span>
+                <div class="bar" style="width: 30%"></div>
+                <span class="category-amount" style="color: white">7.7K</span>
+              </div>
+              <div class="transaction-category">
+                <span class="category-title">Cheque</span>
+                <div class="bar" style="width: 40%"></div>
+                <span class="category-amount" style="color: white">12K</span>
+              </div>
+            </div>
+          </div>
+
+          <footer class="footer">
+            <div class="container">
+              <div class="row">
+                <div class="col text-center">
+                  <p>Contact Us</p>
+                  <a href="mailto:your@email.com">
+                    <i class="fa fa-envelope fa-2xl" style="color: white"></i>
+                  </a>
+                  <p>EyeML 2024<br />All Rights Reserved</p>
+                </div>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  </body>
+</html>

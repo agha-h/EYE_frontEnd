@@ -1,0 +1,154 @@
+*{
+    margin: 0;padding: 0;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+ 
+}
+.black {
+    background-color: #4CAF50;
+    padding: 20px;
+    background: url('../static/skins.png') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+.centered-text {
+    text-align: center;
+    color: #0a710d;
+}
+
+.logo-icon {
+    display: block;
+  
+    width: 200px; /* Increase width as needed */
+    height: auto; 
+}
+.black h2{
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.middle{
+    padding: 50px;
+    text-align: center;
+}
+
+.middle p{
+    font-size: 24px;
+    font-weight: bold;
+}
+.logos-icon {
+    display: block;
+    margin: 0 auto; /* Centers the image */
+    width: 200px; /* Increase width as needed */
+    height: auto; 
+
+    }
+
+    .form-container {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    input[type="text"] {
+        padding: 10px;
+        margin-top: 10px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        width: 15%; /* Adjust width as needed */
+    }
+
+    button {
+        background-color: #108914;
+        color: white;
+        padding: 10px 20px;
+        font-family: 'Times New Roman', Times, serif;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        margin-top: 10px;
+    }
+
+    button:hover {
+        opacity: 0.8;
+    }
+
+    .footer{    color: rgb(53, 53, 53);
+        position: absolute;
+        bottom: 0;
+        width: 102%;
+        padding: 10px 0;
+        text-align: center;
+    }
+
+    .footer p:nth-of-type(2),
+    .footer p:nth-of-type(3) {
+        padding-bottom: 15px;
+    }
+
+.back-icons{
+    padding-top:140px;
+    bottom: 0;
+    max-width: 45px;
+    height: auto;
+}
+.back-button {
+    position: absolute;
+    padding-top: 13px;
+    left: 20px;
+    width: 8vh;
+}
+
+
+
+
+
+.container {
+    text-align: center;
+    margin: 0;padding: 0;
+}
+
+.header {
+    /* padding: 20px; */
+  padding: 10vh;
+    background: url('../static/skin.png') no-repeat center center fixed; 
+}
+
+.logo-icon {
+    width: 80px; /* Adjust as needed */
+}
+
+.main-content {
+    background-color: #f8f8f8; /* Light grey background for the content */
+    padding: 40px 20px;
+    margin: 20px auto;
+    display: inline-block;
+}
+
+form {
+    margin-top: 20px;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+}
+
+button {
+    background-color: #4CAF50; /* Green background for the button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+
+
+/* Additional styling as necessary to match your design */
